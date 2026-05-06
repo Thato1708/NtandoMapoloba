@@ -150,6 +150,20 @@
         </div>
 
         <div class="project-card">
+          <img src="rockPaperScissors.png" alt="Project Image">
+          <span class="project-year">2024</span>
+          <h3>Rock Paper Scissors</h3>
+
+          <p class="project-desc">
+            A simple implementation of the classic Rock Paper Scissors game with a modern UI.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/Thato1708/RockPaperScissors" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
           <img src="eNompiloPHC.png" alt="Project Image">
           <span class="project-year">2023</span>
           <h3>eNompilo Primary Healthcare System</h3>
@@ -162,7 +176,6 @@
             <a href="https://github.com/Thato1708/eNompilo-PHC-System" target="_blank">Source</a>
           </div>
         </div>
-
       </div>
 
       <button class="scroll-btn right" onclick="scrollProjects(1)">→</button>
@@ -198,10 +211,6 @@
       © 2026 Ntando Mapoloba.<br>
       All Rights Reserved.
     </div>
-
-    <button class="back-to-top" onclick="scrollToTop()">
-      Back to Top ↑
-    </button>
   </div>
 
 </footer>
@@ -240,12 +249,7 @@
   }, 1500);
 }
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+// Footer glow effect
 
 const footer = document.querySelector("footer");
 const glow = document.querySelector(".footer-glow");
@@ -263,6 +267,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(footer);
+
+// Projects scroll function
 
 function scrollProjects(direction) {
   const track = document.getElementById("projectsTrack");

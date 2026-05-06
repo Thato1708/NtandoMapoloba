@@ -57,6 +57,17 @@
   font-family: var(--font-heading);
     }
 
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* =========================
    THEME TOGGLE ICON
 ========================= */
@@ -80,7 +91,7 @@
   justify-content: center;
 
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;
 
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -300,27 +311,6 @@
   text-align: left;
 }
 
-/* BACK TO TOP */
-.back-to-top {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
-  background: none;
-  border: 1px solid var(--text);
-  padding: 8px 12px;
-  border-radius: 20px;
-
-  cursor: pointer;
-  color: var(--text);
-  transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-  background: var(--text);
-  color: var(--bg);
-}
-
 /* =========================
    FOOTER GLOW EFFECT
 ========================= */
@@ -396,10 +386,16 @@ body.footer-active .footer-glow {
    PROJECTS SCROLLER
 ========================= */
 
-.projects-wrapper {
+/* .projects-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+} */
+
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* prevents bleed */
 }
 
 /* horizontal track */
@@ -409,7 +405,7 @@ body.footer-active .footer-glow {
   overflow-x: auto;
   scroll-behavior: smooth;
 
-  padding: 20px 50px;
+  padding: 20px 60px;
 }
 @media (max-width: 768px) {
   .scroll-btn {
@@ -430,7 +426,8 @@ body.footer-active .footer-glow {
 .project-card {
   min-width: 240px;
   max-width: 240px;
-  height: 360px;
+  height: auto;
+  min-height: 360px;
 
   background: var(--card);
   border-radius: 14px;
@@ -530,9 +527,9 @@ body.footer-active .footer-glow {
 }
 
 .scroll-btn.left {
-  left: -20px;
+  left: 10px;
 }
 
 .scroll-btn.right {
-  right: -30px;
+  right: 10px;
 }

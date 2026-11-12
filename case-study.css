@@ -1,0 +1,166 @@
+/* Case-study additions. Load after styles.css.
+   Tokens are self-contained and follow your existing [data-theme] toggle. */
+
+:root {
+  --cs-bg: #ffffff;
+  --cs-text: #1a1a1a;
+  --cs-muted: #5c5c5c;
+  --cs-border: #e2e2e2;
+  --cs-chip: #f1f1f1;
+}
+
+:root[data-theme="dark"] {
+  --cs-bg: #171717;
+  --cs-text: #f0f0f0;
+  --cs-muted: #a8a8a8;
+  --cs-border: #333333;
+  --cs-chip: #262626;
+}
+
+/* Tech-stack tags on cards and inside dialogs */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+.tech-tags li {
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: var(--cs-chip);
+  color: var(--cs-text);
+}
+
+/* "Case study" button next to the Live link: match your .project-links a style if needed */
+.case-btn {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  cursor: pointer;
+}
+
+.case-btn:hover {
+  opacity: 0.8;
+}
+
+/* Dialog */
+.case-dialog {
+  width: min(720px, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 1px solid var(--cs-border);
+  border-radius: 16px;
+  background: var(--cs-bg);
+  color: var(--cs-text);
+}
+
+.case-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.case-inner {
+  padding: 1.5rem;
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.case-inner h2 {
+  margin: 0 2rem 0.25rem 0;
+}
+
+.case-inner h3 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.case-inner p {
+  max-width: 65ch;
+  margin: 0 0 0.75rem;
+}
+
+.case-meta {
+  color: var(--cs-muted);
+  font-size: 0.9rem;
+}
+
+.case-inner code {
+  font-size: 0.85em;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: var(--cs-chip);
+}
+
+.case-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--cs-text);
+  background: var(--cs-chip);
+  border: 1px solid var(--cs-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+/* Client review */
+.case-quote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 3px solid var(--cs-border);
+}
+
+.case-quote p {
+  margin: 0 0 0.25rem;
+}
+
+.case-quote footer {
+  color: var(--cs-muted);
+  font-size: 0.85rem;
+}
+
+/* Admin screenshots */
+.case-shots {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 0.5rem 0 1rem;
+}
+
+.case-shots figure {
+  margin: 0;
+}
+
+.case-shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--cs-border);
+}
+
+.case-shots figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--cs-muted);
+}
+
+.case-links a {
+  color: inherit;
+}
+
+.case-dialog :focus-visible,
+.case-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="case-study.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <title>Ntando Mapoloba</title>
 </head>
@@ -29,26 +30,10 @@
   <!-- HERO -->
   <section class="hero section-alt">
     <h1 class="font">Ntando Mapoloba</h1>
-    <p>Full Stack Developer | Web Developer</p>
+    <p>Full-Stack Developer | ASP.NET Core & PERN | Remote from South Africa</p>
     <div class="socials">
-  <a href="https://www.instagram.com/ntandomapoloba2/" target="_blank" aria-label="Instagram">
-    <!-- Instagram -->
-    <svg viewBox="0 0 24 24" class="icon">
-      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 
-      5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.9a1.1 
-      1.1 0 11-2.2 0 1.1 1.1 0 012.2 0zM12 9a3 3 0 100 6 3 3 0 000-6z"/>
-    </svg>
-  </a>
 
-  <a href="https://facebook.com/ntando.mapoloba" target="_blank" aria-label="Facebook">
-    <!-- Facebook -->
-    <svg viewBox="0 0 24 24" class="icon">
-      <path d="M13 22v-8h3l1-4h-4V7c0-1.1.3-2 2-2h2V1h-3c-3 0-5 2-5 
-      5v3H6v4h3v8h4z"/>
-    </svg>
-  </a>
-
-  <a href="https://www.linkedin.com/in/ntando-mapoloba-93aa53224/" target="_blank" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/ntando-mapoloba-93aa53224/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
     <!-- LinkedIn -->
     <svg viewBox="0 0 24 24" class="icon">
       <path d="M6 9H2v12h4V9zM4 2a2 2 0 100 4 2 2 0 000-4zm6 7h-4v12h4v-7c0-2 
@@ -56,7 +41,7 @@
     </svg>
   </a>
 
-  <a href="https://github.com/Thato1708" target="_blank" aria-label="GitHub">
+  <a href="https://github.com/Thato1708" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
     <!-- GitHub -->
     <svg viewBox="0 0 24 24" class="icon">
       <path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.9 
@@ -80,14 +65,21 @@
 </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT (rewritten in the next step) -->
   <section class="section">
     <div class="content">
       <h2>About Me</h2>
       <p>
-        I’m a full-stack software developer focused on building clean, scalable, and practical web applications that solve real-world problems. I work across both frontend and backend using technologies like .NET and the PERN stack, with a strong emphasis on performance, maintainability, and user experience.
-        Beyond personal development, I also run <strong>Pistis Technologies</strong>, where I take on freelance and contract-based projects. This allows me to apply engineering principles in real client environments by building production-ready systems, improving business workflows, and delivering end-to-end digital solutions.
-        I’m not just focused on writing code, I focus on shipping reliable systems that create value, scale well, and meet real business needs.
+        I’m a full-stack developer based in East London, South Africa, working remotely.
+        I build client websites and admin systems with ASP.NET Core MVC and the PERN stack, 
+        and I’ve delivered three for real clients: Jesus Journey Runners, Emily Bakes and 
+        Goshen Business and Career Advisory Services. Each has a custom admin area, so the 
+        client can update content without a developer.
+        On the data side I work with SQL: PostgreSQL on client projects and MS SQL Server on earlier ones.
+        I also have 2+ years as a remote helpdesk technician, working tickets to SLAs in 
+        Salesforce and Jira, so I think about who has to use and support a system after launch. 
+        I run Pistis Technologies part-time, and I’m open to remote full-stack and technical 
+        support engineering roles.
       </p>
     </div>
   </section>
@@ -100,83 +92,119 @@
 
     <div class="projects-wrapper">
 
-      <button class="scroll-btn left" onclick="scrollProjects(-1)">←</button>
+      <button type="button" class="scroll-btn left" aria-label="Scroll projects left" onclick="scrollProjects(-1)">←</button>
 
       <div class="projects-track" id="projectsTrack">
 
-        <!-- CARD -->
+        <!-- GOSHEN BUSINESS AND CAREER ADVISORY SERVICES -->
         <div class="project-card">
-          <img src="JJR.png" alt="Project Image">
+          <img src="goshenbcadvisory.png" alt="Goshen Business and Career Advisory Services Website" class="project-img">
+          <span class="project-year">2026</span>
+          <h3>Goshen Business and Career Advisory Services</h3>
+
+          <p class="project-desc">
+            A CMS-driven site for an advisory firm that explains what Goshen does, with an admin dashboard for publishing insights and professional engagements.
+          </p>
+
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>ASP.NET Core MVC</li>
+            <li>Tailwind CSS</li>
+            <li>Neon PostgreSQL</li>
+            <li>Cloudinary</li>
+          </ul>
+
+          <div class="project-links">
+            <a href="https://goshenbcadvisory.co.za" target="_blank" rel="noopener noreferrer">Live</a>
+            <button type="button" class="case-btn" onclick="openCase('case-goshen')">Case study</button>
+          </div>
+        </div>
+
+        <!-- JESUS JOURNEY RUNNERS -->
+        <div class="project-card">
+          <img src="JJR.png" alt="Jesus Journey Runners Website">
           <span class="project-year">2026</span>
           <h3>Jesus Journey Runners</h3>
 
           <p class="project-desc">
-            Custom CMS-powered NGO platform built with C# ASP.NET Core MVC, Tailwind CSS, Neon PostgreSQL, and Cloudinary, featuring events, galleries, SEO, and administration.
+            A custom CMS for an NGO: the client’s team publishes events and manages gallery images themselves, and visitors can donate online.
           </p>
 
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>ASP.NET Core MVC</li>
+            <li>Tailwind CSS</li>
+            <li>Neon PostgreSQL</li>
+            <li>Cloudinary</li>
+          </ul>
+
           <div class="project-links">
-            <a href="https://jesusjourneyrunners.co.za/" target="_blank">Live</a>
+            <a href="https://jesusjourneyrunners.co.za/" target="_blank" rel="noopener noreferrer">Live</a>
+            <button type="button" class="case-btn" onclick="openCase('case-jjr')">Case study</button>
           </div>
         </div>
 
+        <!-- EMILY BAKES -->
         <div class="project-card">
-          <img src="EmilyBakes.png" alt="Project Image">
+          <img src="EmilyBakes.png" alt="Emily Bakes Blog Website">
           <span class="project-year">2026</span>
           <h3>Emily Bakes Blog</h3>
 
           <p class="project-desc">
-            A full-stack recipe blog built with the PERN stack featuring a custom admin dashboard for managing recipes and images. 
+            A PERN-stack recipe blog with an admin dashboard for recipes, images and email subscribers, including CSV export.
           </p>
 
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>PostgreSQL</li>
+            <li>Express</li>
+            <li>React</li>
+            <li>Node.js</li>
+          </ul>
+
           <div class="project-links">
-            <a href="https://emilybakesblog.onrender.com/" target="_blank">Live</a>
+            <a href="https://emilybakesblog.onrender.com/" target="_blank" rel="noopener noreferrer">Live</a>
+            <button type="button" class="case-btn" onclick="openCase('case-emily')">Case study</button>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="PistisTechnologies.jpeg" alt="Project Image">
+          <img src="PistisTechnologies.jpeg" alt="Pistis Technologies Website">
           <span class="project-year">2025</span>
           <h3>Pistis Technologies</h3>
           
           <p class="project-desc">
             A company website for Pistis Technologies. It showcases services, company values, and includes a contact form with email integration.
           </p>
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
 
           <div class="project-links">
-            <a href="https://www.pististechnologies.co.za/" target="_blank">Live</a>
+            <a href="https://www.pististechnologies.co.za/" target="_blank" rel="noopener noreferrer">Live</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="LibraryManagementSystem.png" alt="Project Image">
+          <img src="LibraryManagementSystem.png" alt="Library Management System Website">
           <span class="project-year">2024</span>  
           <h3>Library System</h3>
 
           <p class="project-desc">
             Library system for the management of operations for books, members, and borrowing records, with efficient tracking and management.
           </p>
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>ASP.NET Core MVC</li>
+            <li>MS SQL Server</li>
+            <li>Bootstrap5</li>
+          </ul>
 
           <div class="project-links">
-            <a href="https://github.com/Thato1708/LibraryManagementSystem" target="_blank">Source</a>
+            <a href="https://github.com/Thato1708/LibraryManagementSystem" target="_blank" rel="noopener noreferrer">Source</a>
           </div>
         </div>
 
         <div class="project-card">
-          <img src="rockPaperScissors.png" alt="Project Image">
-          <span class="project-year">2024</span>
-          <h3>Rock Paper Scissors</h3>
-
-          <p class="project-desc">
-            A simple implementation of the classic Rock Paper Scissors game with a modern UI.
-          </p>
-
-          <div class="project-links">
-            <a href="https://github.com/Thato1708/RockPaperScissors" target="_blank">Source</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <img src="eNompiloPHC.png" alt="Project Image">
+          <img src="eNompiloPHC.png" alt="eNompilo Primary Healthcare System Website">
           <span class="project-year">2023</span>
           <h3>eNompilo Primary Healthcare System</h3>
 
@@ -184,13 +212,19 @@
             ASP.NET MVC PHC system with the ability to manage appointments, vaccine tracking, breathing support, video recaps, and GBV FAQ
           </p>
 
+          <ul class="tech-tags" aria-label="Tech stack">
+            <li>ASP.NET MVC</li>
+            <li>MS SQL Server</li>
+            <li>Bootstrap5</li>
+          </ul>
+
           <div class="project-links">
-            <a href="https://github.com/Thato1708/eNompilo-PHC-System" target="_blank">Source</a>
+            <a href="https://github.com/Thato1708/eNompilo-PHC-System" target="_blank" rel="noopener noreferrer">Source</a>
           </div>
         </div>
       </div>
 
-      <button class="scroll-btn right" onclick="scrollProjects(1)">→</button>
+      <button type="button" class="scroll-btn right" aria-label="Scroll projects right" onclick="scrollProjects(1)">→</button>
 
     </div>
 
@@ -198,6 +232,145 @@
 </section>
   
 </div>
+
+<!-- ============ CASE STUDY DIALOGS ============ -->
+
+<dialog class="case-dialog" id="case-goshen" aria-labelledby="case-goshen-title">
+  <div class="case-inner">
+    <button type="button" class="case-close" aria-label="Close case study">Close</button>
+    <h2 id="case-goshen-title">Goshen Business and Career Advisory Services</h2>
+    <p class="case-meta">CMS-driven site for an advisory firm · Built solo via Pistis Technologies · 2026</p>
+
+    <h3>Problem</h3>
+    <p>Goshen Business and Career Advisory Services needed a website that explains what the firm is and what it does, and lets its team publish thought leadership and show its professional engagements without a developer.</p>
+
+    <h3>Decisions</h3>
+    <p>This needed more than a static brochure site, so I built a custom CMS in ASP.NET Core MVC, the stack I know best, which lets Goshen update content without a developer. MVC’s structure suits database-driven features, and it works well with authentication, authorization and Entity Framework Core. I organised the site around Sectors, Services, Advisory, Programmes and Insights, so visitors can see what Goshen offers. From the admin dashboard, the team can create, edit and delete insights and professional engagements, including their photos. The admin area is protected with ASP.NET Core Identity: <code>[Authorize]</code> on the admin controllers, hashed passwords, and a single admin role that can sign in.</p>
+
+    <h3>Stack</h3>
+    <ul class="tech-tags">
+      <li>ASP.NET Core MVC</li>
+      <li>ASP.NET Core Identity</li>
+      <li>Tailwind CSS</li>
+      <li>Neon PostgreSQL</li>
+      <li>Cloudinary</li>
+    </ul>
+
+    <h3>Result</h3>
+    <p>Delivered and live. The client manages its own insights and engagements from the admin dashboard.</p>
+
+    <blockquote class="case-quote">
+      <p>“We particularly appreciated their attention to detail, responsiveness and commitment to delivering a quality solution.”</p>
+      <footer>Goshen Business &amp; Career Advisory Services, Google review</footer>
+    </blockquote>
+
+    <h3>Admin side</h3>
+    <div class="case-shots">
+      <figure>
+        <img src="GoshenAdminDashboard.png" alt="Goshen admin dashboard overview" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Admin dashboard</figcaption>
+      </figure>
+      <figure>
+        <img src="GoshenAdminDashboardMenu.png" alt="Goshen admin dashboard navigation menu for managing content" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Admin navigation menu</figcaption>
+      </figure>
+    </div>
+
+    <p class="case-links"><a href="https://goshenbcadvisory.co.za" target="_blank" rel="noopener noreferrer">Visit the live site</a></p>
+  </div>
+</dialog>
+
+<dialog class="case-dialog" id="case-jjr" aria-labelledby="case-jjr-title">
+  <div class="case-inner">
+    <button type="button" class="case-close" aria-label="Close case study">Close</button>
+    <h2 id="case-jjr-title">Jesus Journey Runners</h2>
+    <p class="case-meta">Custom CMS for an NGO · Built and deployed solo · 2026</p>
+
+    <h3>Problem</h3>
+    <p>Jesus Journey Runners, an NGO, needed to publish event updates and photos without waiting on a developer, and to accept online donations.</p>
+
+    <h3>Decisions</h3>
+    <p>I built a custom CMS in ASP.NET Core MVC, the framework I know best, so I could deliver quickly and keep the code easy to maintain. Images needed care because two services share the job: Cloudinary stores the image files, while Neon PostgreSQL stores each image’s URL, caption and album link. When an admin uploads an image, the app sends it to Cloudinary through an <code>IImageStorageService</code>, receives the URL, assigns it to the entity and saves the record with Entity Framework Core’s <code>SaveChangesAsync()</code>.</p>
+
+    <h3>Stack</h3>
+    <ul class="tech-tags">
+      <li>ASP.NET Core MVC</li>
+      <li>Tailwind CSS</li>
+      <li>Neon PostgreSQL</li>
+      <li>Entity Framework Core</li>
+      <li>Cloudinary</li>
+    </ul>
+
+    <h3>Result</h3>
+    <p>Delivered and live. The client’s team can create, edit and delete events and gallery images from an admin dashboard, and visitors can donate through the site.</p>
+
+    <blockquote class="case-quote">
+      <p>“They delivered way more than we asked for.”</p>
+      <footer>Jesus Journey Runners, Google review</footer>
+    </blockquote>
+
+    <h3>Admin side</h3>
+    <div class="case-shots">
+      <!-- Each figure removes itself if the image file is missing, so nothing looks broken -->
+      <figure>
+        <img src="jjr-admin-events.png" alt="Admin dashboard page for creating and editing events" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Events: create, edit and delete</figcaption>
+      </figure>
+      <figure>
+        <img src="jjr-admin-gallery.png" alt="Admin dashboard page for uploading and managing gallery images" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Gallery: upload and manage images</figcaption>
+      </figure>
+    </div>
+
+    <p class="case-links"><a href="https://jesusjourneyrunners.co.za/" target="_blank" rel="noopener noreferrer">Visit the live site</a></p>
+  </div>
+</dialog>
+
+<dialog class="case-dialog" id="case-emily" aria-labelledby="case-emily-title">
+  <div class="case-inner">
+    <button type="button" class="case-close" aria-label="Close case study">Close</button>
+    <h2 id="case-emily-title">Emily Bakes Blog</h2>
+    <p class="case-meta">PERN-stack recipe blog · Built and deployed solo · 2026</p>
+
+    <h3>Problem</h3>
+    <p>Emily Bakes wanted to build a subscriber list for her recipes and keep every recipe available on a permanent site, without needing a developer for each post.</p>
+
+    <h3>Decisions</h3>
+    <p>I built a PERN-stack blog with a custom admin dashboard where she writes recipes and manages images. For subscribers, I built a custom email subscription form that saves sign-ups to PostgreSQL through an Express API, so the list lives in her own database. The dashboard includes subscriber management and CSV export. I designed, built and deployed it on Render.</p>
+
+    <h3>Stack</h3>
+    <ul class="tech-tags">
+      <li>PostgreSQL</li>
+      <li>Express</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Render</li>
+    </ul>
+
+    <h3>Result</h3>
+    <p>Delivered and live. Recipes and images are managed from one dashboard, and subscribers are stored in the client’s own database and can be exported as CSV.</p>
+
+    <blockquote class="case-quote">
+      <p>“They were easy to work with, listened to what I wanted, and brought my vision to life beautifully.”</p>
+      <footer>Emily Bakes, Google review</footer>
+    </blockquote>
+
+    <h3>Admin side</h3>
+    <div class="case-shots">
+      <figure>
+        <img src="emily-admin-recipes.png" alt="Admin dashboard page for writing and managing recipes" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Recipes and images</figcaption>
+      </figure>
+      <figure>
+        <img src="emily-admin-subscribers.png" alt="Admin dashboard subscriber list with a CSV export button" loading="lazy" onerror="this.closest('figure').remove()">
+        <figcaption>Subscribers and CSV export</figcaption>
+      </figure>
+    </div>
+
+    <p class="case-links"><a href="https://emilybakesblog.onrender.com/" target="_blank" rel="noopener noreferrer">Visit the live site</a></p>
+  </div>
+</dialog>
+
 <div class="footer-glow"></div>
 <footer class="footer">
 
@@ -292,6 +465,21 @@ function scrollProjects(direction) {
     behavior: "smooth"
   });
 }
+
+// Case study dialogs
+
+function openCase(id) {
+  const dialog = document.getElementById(id);
+  if (dialog && typeof dialog.showModal === "function") dialog.showModal();
+}
+
+document.querySelectorAll(".case-dialog").forEach((dialog) => {
+  dialog.querySelector(".case-close").addEventListener("click", () => dialog.close());
+  // Click on the dark backdrop closes the dialog
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+});
 </script>
 
 </body>
